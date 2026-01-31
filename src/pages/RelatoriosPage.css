@@ -1,0 +1,90 @@
+.relatorios-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.relatorios-page h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.relatorios-page p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.usuario-logado-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  font-weight: 600;
+}
+
+.usuario-logado-info p {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}
+
+.usuario-logado-info strong {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.relatorios-tabela-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.relatorios-tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.relatorios-tabela th,
+.relatorios-tabela td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.relatorios-tabela th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.relatorios-tabela tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.tipo-movimentacao {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.tipo-movimentacao.entrada {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.tipo-movimentacao.saida {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.erro {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}

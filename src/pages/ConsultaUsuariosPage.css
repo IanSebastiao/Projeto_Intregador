@@ -1,0 +1,182 @@
+.consulta-usuarios-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.form-card {
+  padding: 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-body h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.alert {
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+.table-responsive {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.table thead {
+  background-color: #f8f9fa;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.badge-admin {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-comum {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn {
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.btn-sm {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid #667eea;
+  color: #667eea;
+}
+
+.btn-outline-primary:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.me-2 {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .consulta-usuarios-page {
+    padding: 10px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .table-responsive {
+    padding: 10px;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+}

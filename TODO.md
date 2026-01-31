@@ -1,0 +1,4 @@
+- [ ] Corrigir bug no MovimentacaoForm.js: alterar {produto.name} para {produto.nome} e value={produto.id} para value={produto.idproduto}
+- [x] Adicionar rotas aninhadas em AppRoutes.js para /movimentacoes/entradas, /movimentacoes/saidas, /movimentacoes/relatorios
+- [x] Corrigir a rota /movimentacoes/nova para renderizar MovimentacaoForm ao invés de MovimentacoesPage
+- [x] Corrigir a rota /movimentacoes/editar/:id para renderizar MovimentacaoForm com dados de edição
