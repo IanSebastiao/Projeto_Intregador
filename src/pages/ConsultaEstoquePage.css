@@ -2,6 +2,7 @@
   min-height: calc(100vh - 80px);
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 40px 20px;
+  overflow-x: hidden;
 }
 
 .page-container {
@@ -11,6 +12,7 @@
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
 }
 
 .page-container h1 {
@@ -93,11 +95,11 @@
   background: #e68900;
 }
 .btn-acao.pdf {
-  background: #ff9800;
+  background: #27ae60;
   color: #fff;
 }
 .btn-acao.pdf:hover {
-  background: #e68900;
+  background: #229954;
 }
 
 /* Container de ações - garante que os botões fiquem em uma linha */
@@ -143,3 +145,154 @@
   }
 }
 
+@media (max-width: 768px) {
+  .consulta-estoque-page {
+    padding: 16px 10px;
+  }
+
+  .page-container {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+
+  .estoque-tabela thead {
+    display: none;
+  }
+
+  .estoque-tabela, .estoque-tabela tbody, .estoque-tabela tr, .estoque-tabela td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .estoque-tabela tr {
+    margin-bottom: 12px;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+    page-break-inside: avoid;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .estoque-tabela td {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: none;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    gap: 12px;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .estoque-tabela td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #2c3e50;
+    min-width: 110px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+
+  .acoes-inline {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .acoes-inline .btn-acao {
+    flex: 0 1 auto;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    margin: 2px;
+  }
+
+  .search-filter-bar {
+    flex-direction: column;
+    gap: 10px !important;
+    padding: 12px !important;
+  }
+
+  .search-filter-bar > div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .search-filter-bar input,
+  .search-filter-bar select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .btn-acao {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    margin-right: 2px;
+  }
+
+  .estoque-tabela th, .estoque-tabela td {
+    padding: 6px 8px;
+  }
+
+  .page-container h1 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .page-container p {
+    font-size: 0.95rem;
+  }
+
+  .estoque-tabela-wrapper {
+    margin-top: 16px;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .consulta-estoque-page {
+    padding: 12px 8px;
+  }
+
+  .page-container {
+    padding: 12px 10px;
+  }
+
+  .estoque-tabela td {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .estoque-tabela td::before {
+    min-width: auto;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .acoes-inline {
+    margin-top: 6px;
+    width: 100%;
+  }
+
+  .btn-acao {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+    min-width: 65px;
+  }
+
+  .search-filter-bar {
+    gap: 8px !important;
+    padding: 10px !important;
+  }
+
+  button[className*="btn-acao"] {
+    white-space: nowrap;
+  }
+}

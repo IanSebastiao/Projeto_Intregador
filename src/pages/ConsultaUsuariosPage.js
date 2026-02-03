@@ -134,16 +134,16 @@ const ConsultaUsuariosPage = () => {
               <tbody>
                 {usuarios.map((u) => (
                   <tr key={u.idusuario}>
-                    <td>{u.matricula}</td>
-                    <td>{u.nome}</td>
-                    <td>{u.email}</td>
-                    <td>{u.telefone}</td>
-                    <td>
+                    <td data-label="Matrícula">{u.matricula}</td>
+                    <td data-label="Nome">{u.nome}</td>
+                    <td data-label="Email">{u.email}</td>
+                    <td data-label="Telefone">{u.telefone}</td>
+                    <td data-label="Perfil">
                       <span className={`badge badge-${u.perfil?.perfil === 'Administrador' ? 'admin' : 'comum'}`}>
                         {u.perfil?.perfil || 'Comum'}
                       </span>
                     </td>
-                    <td>
+                    <td data-label="Ações">
                       <button className="btn btn-sm btn-outline-primary me-2" onClick={() => handleEdit(u)}>
                         Editar
                       </button>

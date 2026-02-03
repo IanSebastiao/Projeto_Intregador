@@ -241,14 +241,14 @@
 
 /* Estilos para botão movimentar na tabela */
 .btn-acao.movimentar {
-  background-color: #3498db;
+  background-color: #ff9800;
   color: white;
 }
 
 .btn-acao.movimentar:hover {
-  background-color: #2980b9;
+  background-color: #e68900;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 8px rgba(230, 137, 0, 0.18);
 }
 
 /* Responsivo */

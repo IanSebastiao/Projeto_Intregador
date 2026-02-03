@@ -169,14 +169,90 @@
 
   .table-responsive {
     padding: 10px;
+    overflow-x: hidden;
   }
 
-  .table {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .table tr {
+    margin-bottom: 12px;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .table td {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: none;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    gap: 12px;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #2c3e50;
+    min-width: 100px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+
+  .table font-size {
     font-size: 0.85rem;
   }
 
-  .table th,
-  .table td {
+  .btn-outline-primary,
+  .btn-outline-danger {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .consulta-usuarios-page {
     padding: 8px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .table td {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table td::before {
+    min-width: auto;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .btn-outline-primary,
+  .btn-outline-danger {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .me-2 {
+    margin-right: 0;
   }
 }

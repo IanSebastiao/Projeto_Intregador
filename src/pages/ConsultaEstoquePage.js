@@ -230,7 +230,8 @@ const ConsultaEstoquePage = () => {
           gap: '16px',
           alignItems: 'center',
           flexWrap: 'wrap',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          boxSizing: 'border-box'
         }}>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flex: '1', minWidth: '300px', flexWrap: 'wrap' }}>
             <div style={{ flex: '1', minWidth: '200px' }}>
@@ -301,7 +302,7 @@ const ConsultaEstoquePage = () => {
               onClick={gerarPDF}
               style={{
                 padding: '8px 16px',
-                backgroundColor: '#ff9800',
+                backgroundColor: '#27ae60',
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
@@ -339,12 +340,12 @@ const ConsultaEstoquePage = () => {
               <tbody>
                 {getFilteredAndSortedProdutos().map(p => (
                   <tr key={p.idproduto}>
-                    <td>{p.nome}</td>
-                    <td>{p.quantidade}</td>
-                    <td>{getTipoNome(p.idtipo)}</td>
-                    <td>{p.local}</td>
-                    <td>{p.codigo || '-'}</td>
-                    <td>
+                    <td data-label="Nome">{p.nome}</td>
+                    <td data-label="Quantidade">{p.quantidade}</td>
+                    <td data-label="Tipo">{getTipoNome(p.idtipo)}</td>
+                    <td data-label="Localização">{p.local}</td>
+                    <td data-label="Código">{p.codigo || '-'}</td>
+                    <td data-label="Ações">
                       <div className="acoes-inline">
                         <button
                           className="btn-acao movimentar"

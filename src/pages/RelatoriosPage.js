@@ -85,18 +85,18 @@ const RelatoriosPage = () => {
             <tbody>
               {movimentacoes.map(mov => (
                 <tr key={mov.id}>
-                  <td>{formatarDataHora(mov.dataregistro || mov.dataRegistro)}</td>
-                  <td>{getProdutoNome(mov.produtoid || mov.produtoId)}</td>
-                  <td>
+                  <td data-label="Data e Hora">{formatarDataHora(mov.dataregistro || mov.dataRegistro)}</td>
+                  <td data-label="Produto">{getProdutoNome(mov.produtoid || mov.produtoId)}</td>
+                  <td data-label="Tipo">
                     <span className={`tipo-movimentacao ${mov.tipo}`}>
                       {mov.tipo === 'entrada' ? 'Entrada' : 'Saída'}
                     </span>
                   </td>
-                  <td>{Math.abs(mov.quantidade)}</td>
-                  <td>{mov.responsavel || '-'}</td>
-                  <td><strong>{mov.usuario_nome || mov.usuario || mov.usuarioNome || mov.usuarioemail || mov.usuarioEmail || '-'}</strong></td>
-                  <td>{mov.usuario_matricula || '-'}</td>
-                  <td>{mov.observacao || '-'}</td>
+                  <td data-label="Quantidade">{Math.abs(mov.quantidade)}</td>
+                  <td data-label="Responsável">{mov.responsavel || '-'}</td>
+                  <td data-label="Usuário"><strong>{mov.usuario_nome || mov.usuario || mov.usuarioNome || mov.usuarioemail || mov.usuarioEmail || '-'}</strong></td>
+                  <td data-label="Matrícula">{mov.usuario_matricula || '-'}</td>
+                  <td data-label="Observação">{mov.observacao || '-'}</td>
                 </tr>
               ))}
             </tbody>
